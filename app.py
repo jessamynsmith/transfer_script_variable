@@ -12,4 +12,4 @@ def background():
     var = request.form('name')
     message = "You are " + var
     print(message)
-    return render_template('test.html', message=message)
+    return render_template('html_with_javascript.html', message=message)

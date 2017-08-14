@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#button").click(function(){
+          var data = {
+                name: "Elaine Davis"
+          };
+          $.ajax({
+              url: "http://127.0.0.1:5000/hello",
+              type:"POST",
+              data: JSON.stringify(data),
+              contentType:"application/json",
+              success: function(result) {
+                console.log(result);
+              }
+            });
+        });
+    });
+
+</script>
+<p id="welcome">Welcome to the web page</p>
+<button id="button">Click Me!</button>
+</body>
+</html>

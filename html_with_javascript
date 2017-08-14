@@ -7,18 +7,16 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-    $button.click(function(){
+    $("button").click(function(){
         $.post("http://127.0.0.1:5000/hello", {
             name: "Elaine Davis",},
             function(message) {
                 alert({{message}});
             });
         });
-    });
 
 </script>
 <p id="welcome">Welcome to the web page</p>
-<button>Click Me!</button>
+<button id="button">Click Me!</button>
 </body>
 </html>
